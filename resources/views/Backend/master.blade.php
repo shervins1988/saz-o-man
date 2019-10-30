@@ -26,7 +26,6 @@
     <link rel="shortcut icon" href="{{url('backend/dist/saz-o-man/assets/kg_style/media/img/logo/favicon.ico')}}" />
     <link rel="shortcut icon" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.min.css" />
     <link rel="shortcut icon" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.css" />
-
     {{--{!! Toastr::render() !!}--}}
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
     <script>

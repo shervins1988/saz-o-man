@@ -34,6 +34,12 @@
                title="ویرایش">
                 <i class="la la-edit"></i>
             </a>
+
+            <a href="{{route('categories-menu.indexSetting',$sub_category->id)}}"
+               class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="تعیین ویژگی">
+                <i class="la la-key"></i>
+            </a>
+
             {!! Form::open(['method'=>'DELETE','action'=>['Backend\CategoryController@destroy',$sub_category->id],'style'=>'display:inline-block']) !!}
 
             <button

@@ -41,4 +41,21 @@ class User extends Authenticatable
     {
         return $this->hasMany(Photo::class);
     }
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
+
+/*    public function addresses()
+    {
+        return $this->hasMany(Address::class);
+    }
+    public function coupons()
+    {
+        return $this->belongsToMany(Coupon::class);
+    }
+    public function orders(){
+        return $this->hasMany(Order::class);
+    }*/
 }

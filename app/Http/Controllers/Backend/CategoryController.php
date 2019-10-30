@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\AttributGroup;
 use App\Category;
 use App\Http\Requests\CategoryMenuRequest;
 use App\Http\Requests\CategoryMenuRequestEdit;
@@ -159,5 +160,50 @@ class CategoryController extends Controller
             'alert-type' => 'warning'
         );
         return redirect('/backend/categories-menu')->with($delete_category);
+    }
+
+
+    public function indexSetting($id)
+    {
+        $category = Category::findOrFail($id);
+        $attributeGroups = AttributGroup::all();
+        return view('backend.categories-menu.index-setting', compact('category','attributeGroups'));
+    }
+
+
+    public function saveSetting(Request $request , $id)
+    {
+        $category = Category::findOrFail($id);
+        $category->attributeGroups()->sync($request->attributeGroups);
+
+        $update_atrribute_category = array(
+            'message' => 'ویژگی دسته بندی '.$category->title.' با موفقیت ثبت گردید',
+            'alert-type' => 'info'
+        );
+        $category->save();
+        return redirect('/backend/categories-menu')->with($update_atrribute_category);
+    }
+
+    public function apiIndex()
+    {
+        $categories = Category::with('childrenRecursive')->where('parent_id',null)->get();
+        $response = [
+            'categories' => $categories,
+        ];
+        return response()->json($response, 200);
+    }
+
+
+    public function apiIndexAttribute(Request $request)
+    {
+        $categories = $request->all();
+        $attributeGroup = AttributGroup::with('attributesValue','categories')
+            ->whereHas('categories', function ($q) use ($categories){
+                $q->whereIn('categories.id',$categories);
+            })->get();
+        $response = [
+            'attributes' => $attributeGroup,
+        ];
+        return response()->json($response, 200);
     }
 }

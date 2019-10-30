@@ -690,7 +690,7 @@
                                                 <a  href="javascript:;" class="m-menu__link m-menu__toggle">
                                                     <i class="m-menu__link-icon flaticon-book"></i>
                                                     <span class="m-menu__link-text">
-																ناشرین
+																محصولات
 															</span>
                                                     <i class="m-menu__hor-arrow la la-angle-right"></i>
                                                     <i class="m-menu__ver-arrow la la-angle-right"></i>
@@ -699,15 +699,15 @@
                                                     <span class="m-menu__arrow "></span>
                                                     <ul class="m-menu__subnav">
                                                         <li class="m-menu__item "  m-menu-link-redirect="1" aria-haspopup="true">
-                                                            {{--<a  href="{{route('publishers.index')}}" class="m-menu__link ">--}}
+                                                            <a  href="{{route('products.index')}}" class="m-menu__link ">
 																		<span class="m-menu__link-text">
-																			لیست ناشرین
+																			لیست محصولات
 																		</span>
                                                             </a>
                                                         </li>
 
                                                         <li class="m-menu__item "  m-menu-link-redirect="1" aria-haspopup="true">
-                                                            {{--<a  href="{{route('publishers.create')}}" class="m-menu__link ">--}}
+                                                            <a  href="{{route('products.create')}}" class="m-menu__link ">
 																		<span class="m-menu__link-text">
 																			ایجاد برند
 																		</span>

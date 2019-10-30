@@ -98,21 +98,22 @@
 
 <!-- begin::Quick Nav -->
 <!--begin::Base Scripts -->
+
 <script src="{{url('backend/dist/saz-o-man/assets/vendors/base/vendors.bundle.js')}}" type="text/javascript"></script>
+@yield('script-vuejs')
+@yield('scripts')
 <script src="{{url('backend/dist/saz-o-man/assets/kg_style/base/scripts.bundle.js')}}" type="text/javascript"></script>
-<script src="{{url('backend/dist/saz-o-man/assets/vendors/custom/fullcalendar/fullcalendar.bundle.js')}}"
-        type="text/javascript"></script>
+<script src="{{url('backend/dist/saz-o-man/assets/vendors/custom/fullcalendar/fullcalendar.bundle.js')}}"type="text/javascript"></script>
 <script src="{{url('backend/dist/saz-o-man/assets/app/js/dashboard.js')}}"type="text/javascript"></script>
 <script src="{{url('backend/dist/saz-o-man/assets/kg_style/base/bootstrap-fileinput.js')}}"type="text/javascript"></script>
 <script src="{{url('backend/dist/saz-o-man/assets/kg_style/base/toastr.js')}}" type="text/javascript"></script>
 <script src="{{url('backend/dist/saz-o-man/assets/kg_style/base/data-local.js')}}" type="text/javascript"></script>
+<script src="{{url('backend/dist/saz-o-man/assets/kg_style/base/bootstrap-select.min.js')}}" type="text/javascript"></script>
 {{--<script src="{{url('backend/dist/saz-o-man/assets/kg_style/base/jquery-3.3.1.min.js')}}" type="text/javascript"></script>--}}
 {{--<script src="{{url('admin')}}" type="text/javascript"></script>--}}
 {{--<script src="{{url('backend/dist/saz-o-man/assets/kg_style/base/bootstrap-colorpicker.js')}}" type="text/javascript"></script>--}}
 <script src="{{url('backend/dist/saz-o-man/assets/kg_style/base/jquery.minicolors.min.js')}}" type="text/javascript"></script>
-<script src="{{url('backend/dist/saz-o-man/assets/kg_style/base/bootstrap-select.min.js')}}" type="text/javascript"></script>
 <script src="{{url('backend/dist/saz-o-man/assets/kg_style/base/bootstrap-multiselect.js')}}" type="text/javascript"></script>
-@yield('scripts')
 
 
 
@@ -173,7 +174,4 @@
             }
 
         });*/
-
-
-
 </script>

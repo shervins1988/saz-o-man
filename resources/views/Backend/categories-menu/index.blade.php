@@ -24,9 +24,9 @@
         </div>
     @endif
 
-    @if(Session::has('$update_atrribute_category_articles'))
+    @if(Session::has('update_atrribute_category'))
         <div class="m-alert__text" >
-            {{Session('$update_atrribute_category_articles')}}
+            {{Session('update_atrribute_category')}}
         </div>
     @endif
 
@@ -226,6 +226,12 @@
                                                        title="ویرایش">
                                                         <i class="la la-edit"></i>
                                                     </a>
+
+                                                    <a href="{{route('categories-menu.indexSetting',$category_menu->id)}}"
+                                                       class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="تعیین ویژگی">
+                                                        <i class="la la-key"></i>
+                                                    </a>
+
                                                     {!! Form::open(['method'=>'DELETE','action'=>['Backend\CategoryController@destroy',$category_menu->id],'style'=>'display:inline-block']) !!}
                                                     <button
                                                         class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill"
